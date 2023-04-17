@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/logbookBackground">
+
+    <!-- menu -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/menu_fab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Cancel"
+        android:gravity="end"
+        android:backgroundTint="#c3dbc3"
+        app:icon="@drawable/ic_menu"
+        />
+    <!-- save -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_fab"
+        app:layout_constraintBottom_toTopOf="@+id/menu_fab"
+        app:layout_constraintEnd_toEndOf="@+id/menu_fab"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/ic_export"
+        android:backgroundTint="#c3dbc3"
+        app:fabSize="normal"
+        android:onClick="processCSV"
+        android:contentDescription="@string/app_name"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_text"
+        android:text="Export to Files"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/save_fab"
+        app:layout_constraintEnd_toStartOf="@+id/save_fab"
+        app:layout_constraintTop_toTopOf="@+id/save_fab"
+        android:textColor="@color/black"/>
+    <!-- delete -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete_fab"
+        app:layout_constraintBottom_toTopOf="@+id/save_fab"
+        app:layout_constraintEnd_toEndOf="@+id/save_fab"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#c3dbc3"
+        android:src="@drawable/ic_save_on_list"
+        app:fabSize="normal"
+        android:contentDescription="@string/app_name"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete_text"
+        android:text="Save"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/delete_fab"
+        app:layout_constraintEnd_toStartOf="@+id/delete_fab"
+        app:layout_constraintTop_toTopOf="@+id/delete_fab"
+        android:textColor="@color/black"/>
+    <!-- add -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_fab"
+        app:layout_constraintBottom_toTopOf="@+id/delete_fab"
+        app:layout_constraintEnd_toEndOf="@+id/delete_fab"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#c3dbc3"
+        android:src="@drawable/ic_add_person"
+        app:fabSize="normal"
+        android:contentDescription="@string/app_name"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_text"
+        android:text="Add Student"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/add_fab"
+        app:layout_constraintEnd_toStartOf="@+id/add_fab"
+        app:layout_constraintTop_toTopOf="@+id/add_fab"
+        android:textColor="@color/black"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cysTextView" />
+
+
+
+    <TextView
+        android:id="@+id/cysTextView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#c3dbc3"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Office and P-I-C"
+        android:textAllCaps="true"
+        android:elevation="400dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cysTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
