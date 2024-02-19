@@ -8,7 +8,6 @@
   <div>
     <img src="https://img.shields.io/badge/-Android%20studio-black?style=for-the-badge&logoColor=black&logo=androidStudio&color=a4c639" alt="android studio" />
     <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="java" />
-    <img src="https://img.shields.io/badge/-Node.js-black?style=for-the-badge&logoColor=white&logo=node.js&color=3c873a" alt="js" />
   </div>
 
   <h3 align="center">A Cross-Platform Mobile Application for Fishpond IOT based sensor.</h3>
